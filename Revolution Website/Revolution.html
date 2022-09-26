@@ -5,20 +5,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolution</title>
+    <title>Revolution Restaurant Website</title>
     <link rel="stylesheet" href="Revolution.css">
+
+    <!-- FONT ADDED FROM GOOGLE COPY/PASTED-->
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONS ADDED FROM FONTAWESOME COPY/PASTED-->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/94a48851be.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-        <h1>Revolution</h1>
-    </header>
+<!-- Header / Homepage / Navigation Menu -->
 
-    <main>
-        <p>
-            Welcome to the new <b>Revolution</b> of eating.
-        </p>
-    </main>
+<body onload="slider()">
+
+    <section class="header">
+        <div class="banner">
+            <div class="slider">
+                <img src="images/restaurantinterior2.jpg" id="slideImg">
+            </div>
+            <div class="overlay">
+                <div>
+                    <nav>
+                        <a href="Revolution.html">
+                            <img src="Logo/RevolutionFINAL.png"> </a>
+                        <div class="nav-links" id="navLinks">
+                            <i class="fa fa-times" onclick="hideMenu()"></i>
+                            <ul>
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">ABOUT US</a></li>
+                                <li><a href="">MENU</a></li>
+                                <li><a href="">BLOG</a></li>
+                                <li><a href="">CONTACT</a></li>
+                            </ul>
+                        </div>
+                        <i class="fa fa-bars" onclick="showMenu()"></i>
+                    </nav>
+                </div>
+            </div>
+
+
+            <div class="text-box">
+                <h1>Rise up and eat</h1>
+                <p>
+                    Your culinary revolution starts here.
+                </p>
+
+                <a href="" class="hero-btn">Order your food</a>
+            </div>
+        </div>
+
+        <script>
+            var slideImg = document.getElementById("slideImg");
+
+            var images = new Array(
+                "images/meat3dprinter.jpg",
+                "images/restaurantinterior2.jpg",
+                "images/foods.jpg",
+                "images/kitchen3.jpg"
+            );
+
+            var len = images.length;
+            var i = 0;
+
+            function slider() {
+                if (i > len - 1) {
+                    i = 0;
+                }
+                slideImg.src = images[i];
+                i++;
+                setTimeout('slider()', 3000);
+            }
+
+        </script>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section class="about">
+        <h1>About Us</h1>
+
+        <p>We at Revolution have seen the damage that climate change is doing to our planet. We believe that changing
+            our diet to a more vegetarian based one is a way of solving this problem. As an added bonus, no animals have
+            to be harmed in this process. So we have decided to use the latest technology to serve our customers with 3D
+            printed meat! </p>
+
+        <div class="row">
+            <div class="about-items">
+                <h3>3D Printed Meat</h3>
+                <p>We are using the latest technology to bring you 3D printed meat. Our 3D printers are of the highest
+                    quality and produce the finest meats. All without harming a single living organism.</p>
+            </div>
+            <div class="about-items">
+                <h3>Sustainable</h3>
+                <p>We use sustainable ingredients such as soybeans and wheat to create our meat.
+                    We work together with sustainable farms and farmers to make sure you enjoy our eco-friendly food.
+                </p>
+            </div>
+            <div class="about-items">
+                <h3>Delicious</h3>
+                <p>Our 3D printed meat is indistinguishable from real meat, you will absolutely love what we have to
+                    serve you. Don't believe us? Come try it out for yourself!</p>
+            </div>
+
+    </section>
+
+    <!-- ----- Menu ----- -->
+
+    <section class="menu">
+        <h1>Menu</h1>
+        <p>We have a bunch of tasty dishes for you to try! Everything is fresh from the market and the meat is printed
+            for you when you order. </p>
+
+        <!-- 3 different classes used: row, menu-items and layer. The images are displayed in a row with an added layer on top of it that turns green when hovered over with a mouse -->
+
+        <div class="row">
+            <div class="menu-items">
+                <img src="images/freshvegetables.jpg">
+                <div class="layer">
+                    <h3>FRESH VEGETABLES</h3>
+                </div>
+            </div>
+            <div class="menu-items">
+                <img src="images/veggiedishes.jpg">
+                <div class="layer">
+                    <h3>DELICIOUS MEALS</h3>
+                </div>
+            </div>
+            <div class="menu-items">
+                <img src="images/holdinghamburgers.jpg">
+                <div class="layer">
+                    <h3>TASTY HAMBURGERS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG  -->
+
+    <section class="blog">
+        <h1>Blog</h1>
+        <p>Learn more about how we prep our food, what technology we use and where we get our food from. <br>You can
+            read
+            everything in our different blog posts below. </br> </p>
+
+        <div class="row">
+            <div class="blog-col">
+                <img src="images/3dprinthamburger.jpg">
+                <h3>World Class Technology</h3>
+                <p>We use the latest and greatest 3D printing tech to bring you the finest meats. Learn here what tech
+                    we utilize to curate our meat.</p>
+            </div>
+            <div class="blog-col">
+                <img src="images/chef.jpg">
+                <h3>How We Make Our Food</h3>
+                <p>We work with the finest chefs who have personally selected each item on the menu. Learn more about
+                    their story. </p>
+            </div>
+            <div class="blog-col">
+                <img src="images/farm.jpg">
+                <h3>Farm To Table</h3>
+                <p>Learn how we work with farmers to bring you the freshes ingredients in our menu. All organic and made
+                    with love for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+        <h1>Contact us for more information</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- -JavaScript for Toggle Menu- -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+
+        }
+    </script>
+
 
 </body>
 

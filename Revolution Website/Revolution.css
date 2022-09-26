@@ -1,0 +1,389 @@
+/* Added Font family "Poppins" from Google Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+#slideImg {
+    width: 100%;
+    height: 100%;
+    animation: zoom 3s linear infinite;
+
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    85% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    position: absolute;
+    top: 0;
+}
+
+/* Homepage header with background photo and added alignments*/
+
+
+/*
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/veggiehamburgers.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo  */
+nav img {
+    width: 800px;
+}
+
+/* Navigation Menu */
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+/* Navigation Menu list */
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+/* Navigation Menu attributes*/
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+}
+
+/* Navigation Menu Line Animation */
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(239, 255, 167);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+/* Navigation Menu Line Animation */
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* Text on the Home page */
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Title on the Home page */
+.text-box h1 {
+    font-size: 62px;
+}
+
+/* Paragraph on the Home page */
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Button on the Homepage */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 26px;
+    background: transparent;
+    position: relative;
+}
+
+/* Button on the Homepage Animation */
+.hero-btn:hover {
+    border: 1px solid darkgreen;
+    background: darkgreen;
+    transition: 1s;
+}
+
+/* Hide Icons on Main display (as opposed to Mobile) */
+nav .fa {
+    display: none;
+}
+
+/* making the navigation buttons responsive on mobile */
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: darkgreen;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+/*    About   */
+
+/* About us text at the top */
+.about {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Font size and weight*/
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Text color and font */
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/* Row display of boxes (images) */
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Text inside the boxes and alignment */
+
+.about-items {
+    flex-basis: 31%;
+    background: #fffbd3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/* Header Font size inside box */
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.about-items:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* making the columns responsive on mobile */
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Food Menu */
+
+/* The Top Menu text */
+.menu {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* The images and its boxes. Adjusting the height was necessary because the images weren't the same size */
+
+.menu-items {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+/* for the image to fill the block */
+
+.menu-items img {
+    width: 100%;
+    display: block;
+}
+
+/* the layer that slides over the image */
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+/* when cursor is hovered over the image */
+.layer:hover {
+    background: rgba(2, 65, 10, 0.7);
+}
+
+/* Text animation and size */
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* text animation opacity to 100% */
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* BLOG section */
+
+.blog {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.blog-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin: 5%;
+    text-align: left;
+}
+
+.blog-col img {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 400px;
+}
+
+.blog-col p {
+    padding: 0;
+}
+
+.blog-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/blurryrestaurant.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact h1 {
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px) {
+    .contact h1 {
+        font-size: 24px;
+    }
+}
